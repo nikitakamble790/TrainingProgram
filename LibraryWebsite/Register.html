@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>  
+<head> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <style>
+          
+          panel-body{
+            margin-top:150px;
+          }
+      </style>
+
+    <title>Registration</title>  
+</head>  
+<body>  
+  
+    <div class="container">  
+    <div class="col-md-4">
+        <div class="panel-heading">  
+            <h3 class="panel-title">Registration</h3>  
+        </div>  
+        <div class="panel-body">  
+                <form action=#>   
+                            <div class="form-group">  
+                                <input class="form-control"  placeholder="Username" name="name" type="text" id="name" autofocus>  
+                            </div>  
+  
+                            <div class="form-group">  
+                                <input class="form-control" placeholder="E-mail" name="email" type="email" id="email" autofocus>  
+                            </div>  
+                            <div class="form-group">  
+                                <input class="form-control" placeholder="Password" name="pass" type="password" value="" id="pwd">  
+                            </div>  
+  
+  
+                            <input class="btn btn-lg btn-success btn-block" type="button"  onclick="saveData" value="register" name="register" >  
+  
+                        
+                    </form>  
+                    <center><b>Already registered ?</b> <br><a href="Login.php">Login here</a></center><!--for centered text-->  
+                
+        </div>  
+        </div>  
+        </div>  
+  
+</body> 
+<script>
+function saveData()
+{
+	var name,email,pwd;
+	name=document.getElementById("name").value;
+	email=document.getElementById("email").value;
+	pwd=document.getElementById("pwd").value;
+	
+	localStorage.setItem("name",name);
+	localStorage.setItem("email",email);
+	localStorage.setItem("pwd",pwd);
+}
+	
+</script>   
+</html>  
+  
+
