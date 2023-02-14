@@ -14,6 +14,7 @@ public class ArrayList1 {
 		al.add("Z");
 		al.add("A");
 		al.add("B");
+	
 		
 		System.out.println(al);
 		ArrayList a1=new ArrayList();
