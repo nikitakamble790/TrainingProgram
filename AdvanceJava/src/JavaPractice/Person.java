@@ -3,18 +3,23 @@ package JavaPractice;
 public class Person {
 	
 	
-	public Person(String name, char gender, int age, int weight) {
+	/*public Person(String name, char gender, int age, int weight) {
 	
 		this.name = name;
 		this.gender = gender;
 		this.age = age;
 		this.weight = weight;
-	}
+	}*/
 	String name;
 	char gender;
 	int age;
 	int weight;
-	public String getName() {
+	
+	void Display()
+	{
+		System.out.println("name is:"+name);
+	}
+	/*public String getName() {
 		return name;
 	}
 	public void setName(String name) {
@@ -37,6 +42,6 @@ public class Person {
 	}
 	public void setWeight(int weight) {
 		this.weight = weight;
-	}
+	}*/
 
 }

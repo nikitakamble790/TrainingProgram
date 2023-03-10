@@ -7,7 +7,18 @@ import java.util.List;
 public class MainPerson {
 
 	public static void main(String[] args) {
-		Person p1=new Person("Nikita",'F',22,59);
+		Person p=new Person();
+		p.name="Nikita";
+		p.Display();
+		
+		System.out.println("data is:"+p.name);
+		
+		
+		
+		
+		
+		
+		/*Person p1=new Person("Nikita",'F',22,59);
 		Person p2=new Person("Sneha",'F',24,40);
 		Person p3=new Person("Soham",'M',28,100);
 		Person p4=new Person("Aakash",'M',24,55);
@@ -54,7 +65,7 @@ public class MainPerson {
 	
 	System.out.println(employe.contains(p2));
 	
-	System.out.println(employe.toString());
+	System.out.println(employe.toString());*/
 	}
 
 }
