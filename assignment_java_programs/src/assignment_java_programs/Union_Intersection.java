@@ -5,53 +5,50 @@ import java.util.*;
 public class Union_Intersection {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> al = new ArrayList();
-		al.add(1);
-		al.add(2);
-		al.add(2);
-		al.add(1);
-		al.add(4);
-		al.add(1);
-		al.add(1);
-		al.add(2);
-		al.add(2);
-
-		ArrayList<Integer> al1 = new ArrayList();
-		al1.add(6);
-		al1.add(7);
-		al1.add(8);
-		al1.add(1);
-		al1.add(44);
-		al1.add(6);
-		al1.add(9);
-		al1.add(2);
-		al1.add(2);
-		ArrayList<Integer> union = new ArrayList();
-
-		for (int i = 0; i < al.size(); i++) {
-			if (!union.contains(al.get(i))) {
-				union.add(al.get(i));
+		//String str1="This is";
+		
+		String str="This is";
+		str = str.replaceAll("\\s", "");
+		System.out.println(str);
+		int size=str.length();
+		//formula n*(n+1)/2
+		
+		int temp=0;
+		String subsetArray[] = new String[size * (size + 1) / 2];
+		System.out.println(subsetArray.length);
+		for (int i = 0; i < size; i++) {
+			for (int j = i; j < size; j++) {
+				subsetArray[temp] = str.substring(i, j + 1);
+				temp++;
 			}
 		}
-		for (int i = 0; i < al1.size(); i++) {
-			if (!union.contains(al1.get(i))) {
-				union.add(al1.get(i));
-			}
+		for (int i = 0; i < subsetArray.length; i++) {
+			//System.out.println(subsetArray[i]);
 		}
-		System.out.println("union is: "+union);
-		ArrayList<Integer> inters = new ArrayList();
-		for (int i = 0; i < al.size(); i++) {
-			int temp=al.get(i);
-			if(!inters.contains(temp)) {
-				for (int j = 0; j < al1.size(); j++) {
-					if(temp==al1.get(j))
-					{
-						inters.add(temp);
+		int count=0;
+		System.out.println("repeated substring is:");
+		Map<String, Integer> map=new HashMap<String, Integer>();
+		for(int i=0;i<subsetArray.length-1;i++)
+		{
+			String temp1=subsetArray[i];
+			
+			if(temp1.length()>=2) {
+				//System.out.println(temp1);
+				for(int j=i+1;j<subsetArray.length-1;j++)
+				{
+					System.out.println("subset i:"+subsetArray[i]+" subset j:"+subsetArray[j]);
+					if(subsetArray[i]==subsetArray[j]) {
+						System.out.println();
+						System.out.println();
+						System.out.println("new");
+						System.out.println("repeated substring is:"+subsetArray[i]);
+						count++;
 					}
 				}
 			}
 		}
-		System.out.println("Intersection is: "+inters);
-	}
-
+		System.out.println(count);
+		
 }
+}
+
